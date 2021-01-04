@@ -125,33 +125,6 @@
         ],
         "description": "mongoose model"
     },
-    "heroku help": {
-        "prefix": "x-help-heroku",
-        "body": [
-            "heroku -v",
-            "",
-            "heroku login // to start the following",
-            "",
-            "heroku keys:add // to upload id_rsa.pub",
-            "",
-            "heroku create your-awesome-app // to create a heroku app: http and git URL’s created and directly adding git URL into our remotes",
-            "",
-            "heroku git:remote -a your-awesome-app",
-            "",
-            "At package.json:",
-            "\"scripts\": {\"start\": \"node src/app.js\"} // since heroku executes: \"npm run start\"",
-            "",
-            "At app.js: ",
-            "const port = process.env.PORT || 3000   // first set by heroku dynamically, second for our local set up",
-            "",
-            "Delete up to localhost:3000 on URL fetches // using relative paths",
-            "",
-            "Do git add & commit",
-            "",
-            "git push heroku master"
-        ],
-        "description": "heroku help"
-    },
     "routers/resouce.js": {
         "prefix": "x-routers-resource-js",
         "body": [
@@ -1391,5 +1364,66 @@
           "heroku local web // using .env"
         ],
         "description": "help heroku"
+      },
+      "form file": {
+        "prefix": "x-form-file",
+        "body": [
+          "<form action=\"${1:/api/users/me}/${2:avatar}\" method=\"post\" enctype=\"multipart/form-data\">",
+          "  <input type=\"file\" name=\"${2:avatar}\" />",
+          "  <button>${3:Enviar}</button>",
+          "</form>"
+        ],
+        "description": "form file"
+      },
+      "multer config": {
+        "prefix": "x-multer-config",
+        "body": [
+          "const upload${1:Document} = multer({",
+          "    dest: ${2:pathStringRelativeToTheProjectIfNotUsingBuffer},",
+          "    ${3:limits: {",
+          "        fileSize: ${4:numberOfBytes}",
+          "    \\},}",
+          "    ${5:fileFilter(req, file, cb) {",
+          "        if (!file.originalname.match(/\\.(${6:pdf|doc|docx})$/)) {",
+          "            return cb(new Error('${7:File must be a pdf or word document.}'))",
+          "        \\}",
+          "        cb(undefined, true) // accept the upload",
+          "    \\}}",
+          "})"
+        ],
+        "description": "multer config"
+      },
+      "multer router post": {
+        "prefix": "x-multer-router-post",
+        "body": [
+          "router.post('/users/me/${1:document}', auth, upload${2:Document}.single('${1:document}'), async (req, res) => {",
+          "    req.user.${1:document} = req.file.buffer",
+          "    await req.user.save()",
+          "    res.send()",
+          "}, (error, req, res, next) => {",
+          "    res.status(404).send({ error: error.message })",
+          "})"
+        ],
+        "description": "multer router post"
+      },
+      "multer router get": {
+        "prefix": "x-multer-router-get",
+        "body": [
+          "router.get('/users/:id/${1:document}', async (req, res) => {",
+          "    try {",
+          "        const user = await User.findById(req.params.id)",
+          "",
+          "        if (!user || !user.${1:document}) {",
+          "            throw new Error()",
+          "        }",
+          "",
+          "        res.set('Content-Type', '${2:image/png}')",
+          "        res.send(user.${1:document})",
+          "    } catch (error) {",
+          "        res.status(404).send()",
+          "    }",
+          "})"
+        ],
+        "description": "multer router get"
       }
 }
