@@ -1425,5 +1425,41 @@
           "})"
         ],
         "description": "multer router get"
+      },
+      "multer on schema": {
+        "prefix": "x-multer-schema",
+        "body": [
+          "${1:document}: {",
+          "    type: Buffer",
+          "}"
+        ],
+        "description": "multer on schema"
+      },
+      "multer router delete": {
+        "prefix": "x-multer-router-delete",
+        "body": [
+          "router.delete('/users/me/${1:document}', auth, async (req, res) => {",
+          "    req.user.${1:document} = undefined",
+          "    await req.user.save()",
+          "    res.send()",
+          "})"
+        ],
+        "description": "multer router delete"
+      },
+      "multer model delete": {
+        "prefix": "x-multer-model-delete",
+        "body": [
+          "${1:user}Schema.methods.toJSON = function () {",
+          "    const ${1:user} = this",
+          "    const ${1:user}Object = ${1:user}.toObject()",
+          " ",
+          "    delete ${1:user}Object.password",
+          "    delete ${1:user}Object.tokens",
+          "    delete ${1:user}Object.${2:document}",
+          "",
+          "    return ${1:user}Object",
+          "}"
+        ],
+        "description": "multer model delete"
       }
 }
