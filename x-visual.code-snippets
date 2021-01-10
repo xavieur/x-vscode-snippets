@@ -990,7 +990,15 @@
             "git config --global color.ui true",
             "mkdir <folder>; cd <folder>; git init || git init <folder>; cd <folder>;",
             "",
-            "git config [--global] --list // to see config at that scope",
+            "git config --global|--local|--system --list // to see config at that scope",
+            "git config --global|--local|--system -e // to see/edit config at that scope",
+            "git config --global core.editor \"code -w\"",
+            "git config --global --unset core.editor",
+            "git config <section.key> // to see",
+            "git config <section.key> value // to edit - mac, single quotes; windows, double quotes",
+            "git config --global core.autocrlf input // to fix newline characters on OSX and Linux",
+            "git config --global core.autocrlf true // to fix newline characters on Windows",
+            "",
             "",
             "git config --global alias.mylog \"log --graph\" // to use \"git mylog\"",
             "git config --global alias.st status // to use \"git st\"",
@@ -1139,12 +1147,6 @@
             "git merge-base <commitA> <commitB> // common base",
             "",
             "git merge --abort // restore files before git merge is done: delete <<<< head |||| merged common ancestors >>>> master",
-            "",
-            "git config --global --list",
-            "git config --list",
-            "git config <key>",
-            "git config --global core.autocrlf input // to fix newline characters on OSX and Linux",
-            "git config --global core.autocrlf true // to fix newline characters on Windows",
             "",
             "git rm -f --cached --ignore-unmatch `git ls-files -i --exclude-standard` // after modifying .gitignore",
             "",
@@ -1470,7 +1472,7 @@
       "log tagged": {
         "prefix": "x-log-tagged",
         "body": [
-            "console.log('$1', $1)$0"
+          "console.log('$1', $1)$0"
         ],
         "description": "log tagged"
       }
