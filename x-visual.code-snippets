@@ -803,7 +803,7 @@
     "array sort": {
         "prefix": "x-arr-sort",
         "body": [
-            "${1:const ${2:arraySorted} =} ${3:array}.sort((${4:item}A, ${4:item})=> {",
+            "${1:const ${2:arraySorted} =} ${3:array}.sort((${4:item}A, ${4:item}B)=> {",
             "    if (${4:item}A && ${4:item}B) {",
             "        return -1 // to keep",
             "    } else if (${4:item}A && ${4:item}B) {",
@@ -999,7 +999,6 @@
             "git config --global core.autocrlf input // to fix newline characters on OSX and Linux",
             "git config --global core.autocrlf true // to fix newline characters on Windows",
             "",
-            "",
             "git config --global alias.mylog \"log --graph\" // to use \"git mylog\"",
             "git config --global alias.st status // to use \"git st\"",
             "",
@@ -1137,6 +1136,8 @@
             "git branch -M <old branch name> <new branch name> // if <newbranch> exists",
             "git branch -D <branch name> // delete a branch without checking (local?)",
             "git branch -d <branch name> // delete a branch checking if all has been merged  (local?)",
+            "",
+            "git push <remote repo name> --delete <branch> // delete remote branch",
             "",
             "git gc // garbage collection: to delete manually unreachable commits (without branch label or reachable from one)",
             "",
