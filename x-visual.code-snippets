@@ -24,7 +24,7 @@
             "})"
         ],
         "description": "yargs command",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "yargs parse": {
         "prefix": "x-yargs2",
@@ -32,7 +32,7 @@
             "yargs.parse()"
         ],
         "description": "yargs parse",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "react npm/yarn": {
         "prefix": "x-help-npm-yarn",
@@ -207,7 +207,7 @@
             "module.exports = router"
         ],
         "description": "routers/resource.js",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "ejs out": {
         "prefix": "x-ejsout",
@@ -277,7 +277,7 @@
             "})"
         ],
         "description": "mongoose connection",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "express app get": {
         "prefix": "x-express-app-get",
@@ -287,7 +287,7 @@
             "});"
         ],
         "description": "express app get",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "express app get all": {
         "prefix": "x-express-app-get-all",
@@ -302,7 +302,7 @@
             "})"
         ],
         "description": "express app get all",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "express app init": {
         "prefix": "x-express-app-init",
@@ -346,7 +346,7 @@
             "})"
         ],
         "description": "express app init",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "models/resource.js": {
         "prefix": "x-models-resource",
@@ -407,7 +407,7 @@
             "module.exports = ${1:Resource}"
         ],
         "description": "models/resource.js",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "css init": {
         "prefix": "x-css-init",
@@ -468,7 +468,7 @@
             "}"
         ],
         "description": "css 0",
-        "scope": "css"
+        "scope": "css, scss"
     },
     "middleware/auth.js": {
         "prefix": "x-middleware-auth",
@@ -497,7 +497,7 @@
             "module.exports = auth"
         ],
         "description": "middleware/auth.js",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "models/user.js": {
         "prefix": "x-models-user",
@@ -595,7 +595,7 @@
             "module.exports = User"
         ],
         "description": "models/user.js",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "routers/user.js": {
         "prefix": "x-routers-user",
@@ -712,7 +712,7 @@
             "module.exports = router"
         ],
         "description": "routers/user.js",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "wrap html": {
         "prefix": "x-wrap-html",
@@ -750,7 +750,7 @@
             "})"
         ],
         "description": "array forEach",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "array map": {
         "prefix": "x-arr-map",
@@ -760,7 +760,7 @@
             "})$0"
         ],
         "description": "array map",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "array filter": {
         "prefix": "x-arr-filter",
@@ -770,7 +770,7 @@
             "})$0"
         ],
         "description": "array map",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "array find": {
         "prefix": "x-arr-find",
@@ -780,7 +780,7 @@
             "})$0"
         ],
         "description": "array find",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "array findIndex": {
         "prefix": "x-arr-findIndex",
@@ -790,7 +790,7 @@
             "})$0"
         ],
         "description": "array findIndex",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "array splice": {
         "prefix": "x-arr-splice",
@@ -798,7 +798,7 @@
             "${1:const ${2:newArray} =} ${3:array}.splice(${4:indexToInsert}, ${5:numberToDelete}, ${6:commaSeparatedNewItems})$0"
         ],
         "description": "array splice",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "array sort": {
         "prefix": "x-arr-sort",
@@ -814,7 +814,7 @@
             "})"
         ],
         "description": "array sort",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "arrow function": {
         "prefix": "x-f",
@@ -824,7 +824,7 @@
             "}"
         ],
         "description": "arrow function",
-        "scope": "javascript"
+        "scope": "javascript,javascriptreact"
     },
     "html init": {
         "prefix": "x-html",
@@ -886,7 +886,8 @@
             "    }",
             "}"
         ],
-        "description": "webpack"
+        "description": "webpack",
+        "scope": "javascript,javascriptreact"
     },
     "react index.js": {
         "prefix": "x-react-index-js",
@@ -899,7 +900,8 @@
             "",
             "ReactDOM.render(<${1:App} />, document.querySelector('#appRoot'))"
         ],
-        "description": "react index.js"
+        "description": "react index.js",
+        "scope": "javascript,javascriptreact"
     },
     "react Router.js": {
         "prefix": "x-react-Router-js",
@@ -928,7 +930,8 @@
             "",
             "export default ${1:Router}"
         ],
-        "description": "react Router.js"
+        "description": "react Router.js",
+        "scope": "javascript,javascriptreact"
     },
     "react router Header.js": {
         "prefix": "x-react-router-Header-js",
@@ -947,7 +950,8 @@
             "",
             "export default ${1:Header}"
         ],
-        "description": "react router Header.js"
+        "description": "react router Header.js",
+        "scope": "javascript,javascriptreact"
     },
     "react modal": {
         "prefix": "x-react-Modal-js",
@@ -976,7 +980,8 @@
             "",
             "export default ${1:ComponentModal}"
         ],
-        "description": "react modal"
+        "description": "react modal",
+        "scope": "javascript,javascriptreact"
     },
     "help git": {
         "prefix": "x-help-git",
@@ -1198,14 +1203,16 @@
             "  headers:${4:headersObject}",
             "})"
         ],
-        "description": "axios resource A"
+        "description": "axios resource A",
+        "scope": "javascript,javascriptreact"
     },
     "axios resource B": {
         "prefix": "x-axios-resource-B",
         "body": [
             "const res = await axios.${1:method}(${2:urlString},${3|dataObject,${1:configObject}|},${4:configObject})"
         ],
-        "description": "axios resource B"
+        "description": "axios resource B",
+        "scope": "javascript,javascriptreact"
     },
     "axios interceptors B": {
         "prefix": "x-axios-interceptors-request",
@@ -1217,7 +1224,8 @@
           "    Promise.reject(error)",
           "})"
         ],
-        "description": "axios interceptors B"
+        "description": "axios interceptors B",
+        "scope": "javascript,javascriptreact"
       },
       "axios defaults": {
         "prefix": "x-axios-defaults",
@@ -1225,28 +1233,32 @@
           "axios.defaults.headers.common['${1:Authorization}'] = `Bearer ${${2:jsonwebtoken}}`",
           "axios.defaults.baseURL = ${3:urlString}"
         ],
-        "description": "axios defaults"
+        "description": "axios defaults",
+        "scope": "javascript,javascriptreact"
       },
       "axios script": {
         "prefix": "x-axios-script",
         "body": [
           "<script src=\"https://unpkg.com/axios/dist/axios.min.js\"></script>"
         ],
-        "description": "axios script"
+        "description": "axios script",
+        "scope": "javascript,javascriptreact"
       },
       "axios instance": {
         "prefix": "x-axios-instance",
         "body": [
           "const ${1:axiosInstance} = axios.create(${2:configObject})"
         ],
-        "description": "axios instance"
+        "description": "axios instance",
+        "scope": "javascript,javascriptreact"
       },
       "luxon script": {
         "prefix": "x-luxon-script",
         "body": [
           "<script src=\"https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js\"></script>"
         ],
-        "description": "luxon script"
+        "description": "luxon script",
+        "scope": "html"
       },
       "help luxon": {
         "prefix": "x-help-luxon",
@@ -1380,7 +1392,8 @@
           "  <button>${3:Enviar}</button>",
           "</form>"
         ],
-        "description": "form file"
+        "description": "form file",
+        "scope": "html"
       },
       "multer config": {
         "prefix": "x-multer-config",
@@ -1398,7 +1411,8 @@
           "    \\}}",
           "})"
         ],
-        "description": "multer config"
+        "description": "multer config",
+        "scope": "javascript,javascriptreact"
       },
       "multer router post": {
         "prefix": "x-multer-router-post",
@@ -1412,7 +1426,8 @@
           "    res.status(404).send({ error: error.message })",
           "})"
         ],
-        "description": "multer router post"
+        "description": "multer router post",
+        "scope": "javascript,javascriptreact"
       },
       "multer router get": {
         "prefix": "x-multer-router-get",
@@ -1432,7 +1447,8 @@
           "    }",
           "})"
         ],
-        "description": "multer router get"
+        "description": "multer router get",
+        "scope": "javascript,javascriptreact"
       },
       "multer on schema": {
         "prefix": "x-multer-schema",
@@ -1452,7 +1468,8 @@
           "    res.send()",
           "})"
         ],
-        "description": "multer router delete"
+        "description": "multer router delete",
+        "scope": "javascript,javascriptreact"
       },
       "multer model delete": {
         "prefix": "x-multer-model-delete",
@@ -1468,13 +1485,15 @@
           "    return ${1:user}Object",
           "}"
         ],
-        "description": "multer model delete"
+        "description": "multer model delete",
+        "scope": "javascript,javascriptreact"
       },
       "log tagged": {
         "prefix": "x-log-tagged",
         "body": [
           "console.log('$1', $1)$0"
         ],
-        "description": "log tagged"
+        "description": "log tagged",
+        "scope": "javascript,javascriptreact"
       }
 }

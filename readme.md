@@ -2,4 +2,4 @@
 
 NodeJS, Express, React & related snippets
 
-Version 0.9.3
+Version 0.9.7
