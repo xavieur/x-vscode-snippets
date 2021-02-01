@@ -1495,5 +1495,45 @@
         ],
         "description": "log tagged",
         "scope": "javascript,javascriptreact"
+      },
+      "redux store": {
+        "prefix": "x-redux-store",
+        "body": [
+          "const store = createStore((state = { ${1:stateField}: 0 }, action) => {",
+          "    switch (action.type) {",
+          "        case '${2:ACTION}':",
+          "            return {",
+          "                count: state.${1:stateField} + action.${3:actionField}",
+          "            }",
+          "        default:",
+          "            return state",
+          "    }",
+          "})"
+        ],
+        "description": "redux store",
+        "scope": "javascript,javascriptreact"
+      },
+      "redux subscribe": {
+        "prefix": "x-redux-subscribe",
+        "body": [
+          "const unsubscribe = store.subscribe(() => {",
+          "    console.log(store.getState())",
+          "})",
+          "",
+          "unsubscribe()"
+        ],
+        "description": "redux subscribe",
+        "scope": "javascript,javascriptreact"
+      },
+      "redux action generator": {
+        "prefix": "x-redux-action-generator",
+        "body": [
+          "const ${1:stateFieldAction} = ({ ${2:actionField} = ${3:defaultValue} } = {}) => ({",
+          "    type: '${4:ACTION}',",
+          "    ${2:actionField}",
+          "})"
+        ],
+        "description": "redux subscribe",
+        "scope": "javascript,javascriptreact"
       }
 }
