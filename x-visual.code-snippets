@@ -1535,5 +1535,89 @@
         ],
         "description": "redux subscribe",
         "scope": "javascript,javascriptreact"
+      },
+      "media all": {
+        "prefix": "x-media-all",
+        "body": [
+          "/* X-Small devices (portrait phones, less than 576px) */",
+          "",
+          "${1:.grid{display:grid;grid-gap: 0 30px;grid-template-columns: repeat(1, 1fr)\\}}",
+          "",
+          "/* Small devices (landscape phones, 576px and up) */",
+          "@media screen and (min-width: 576px) {",
+          "  ${2:.grid{grid-template-columns: repeat(3, 1fr);\\}}",
+          "}",
+          "",
+          "/* Medium devices (tablets, 768px and up) */",
+          "@media screen and (min-width: 768px) {",
+          "  ${3:.grid{grid-template-columns: repeat(4, 1fr);\\}}",
+          "}",
+          "",
+          "/* Large devices (desktops, 992px and up) */",
+          "@media screen and (min-width: 992px) {",
+          "    ${4:.grid{grid-template-columns: repeat(5, 1fr);\\}}",
+          "}",
+          "",
+          "/* X-Large devices (large desktops, 1200px and up)} */",
+          "@media screen and (min-width: 1200px) {",
+          "    ${5:.grid{grid-template-columns: repeat(6, 1fr);\\}}",
+          "}",
+          "",
+          "/* XX-Large devices (larger desktops, 1400px and up) */",
+          "@media screen and (min-width: 1400px) {",
+          "    ${6:.grid{grid-template-columns: repeat(7, 1fr);\\}}",
+          "}"
+        ],
+        "description": "media all"
+      },
+      "media small": {
+        "prefix": "x-media-small",
+        "body": [
+          "/* Small devices (landscape phones, 576px and up) */",
+          "@media screen and (min-width: 576px) {",
+          "  ${1:.grid{grid-template-columns: repeat(3, 1fr);\\}}",
+          "}"
+        ],
+        "description": "media small"
+      },
+      "media medium": {
+        "prefix": "x-media-medium",
+        "body": [
+          "/* Medium devices (tablets, 768px and up) */",
+          "@media screen and (min-width: 768px) {",
+          "  ${1:.grid{grid-template-columns: repeat(4, 1fr);\\}}",
+          "}"
+        ],
+        "description": "media medium"
+      },
+      "media large": {
+        "prefix": "x-media-large",
+        "body": [
+          "/* Large devices (desktops, 992px and up) */",
+          "@media screen and (min-width: 992px) {",
+          "  ${1:.grid{grid-template-columns: repeat(5, 1fr);\\}}",
+          "}"
+        ],
+        "description": "media large"
+      },
+      "media x large": {
+        "prefix": "x-media-x-large",
+        "body": [
+          "/* X-Large devices (large desktops, 1200px and up)} */",
+          "@media screen and (min-width: 1200px) {",
+          "  ${1:.grid{grid-template-columns: repeat(6, 1fr);\\}}",
+          "}"
+        ],
+        "description": "media large"
+      },
+      "media xx large": {
+        "prefix": "x-media-xx-large",
+        "body": [
+          "/* XX-Large devices (larger desktops, 1400px and up) */",
+          "@media screen and (min-width: 1400px) {",
+          "  ${1:.grid{grid-template-columns: repeat(7, 1fr);\\}}",
+          "}"
+        ],
+        "description": "media xx large"
       }
 }
