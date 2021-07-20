@@ -1642,19 +1642,28 @@
     ],
     "description": "media xx large"
   },
-  "link favicon": {
-    "prefix": "x-favicon",
+  "favicon link": {
+    "prefix": "x-favicon-link",
     "body": [
       "<link rel=\"icon\" href=\"/img/favicon.ico\" type=\"image/x-icon\">"
     ],
-    "description": "link favicon",
+    "description": "favicon link",
     "scope": "html"
   },
-  "font awesome": {
-    "prefix": "x-font-awesome",
+  "font awesome link": {
+    "prefix": "x-fontawesome-link",
     "body": [
       "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">"
     ],
-    "description": "font awesome"
+    "description": "font awesome link",
+    "scope": "html"
+  },
+  "font awesome icon": {
+    "prefix": "x-fontawesome-icon",
+    "body": [
+      "<i class=\"fa fa-$1\"></i>$0"
+    ],
+    "description": "font awesome icon",
+    "scope": "html"
   }
 }
