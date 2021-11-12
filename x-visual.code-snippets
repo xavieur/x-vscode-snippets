@@ -745,7 +745,7 @@
   "array forEach": {
     "prefix": "x-arr-forEach",
     "body": [
-      "${1:array}.forEach((${2:item}${3:, ${4:index}})=>{",
+      "${1:array}.forEach((${2:item}${3:, ${4:index}}) => {",
       "  $0",
       "})"
     ],
@@ -755,7 +755,7 @@
   "array map": {
     "prefix": "x-arr-map",
     "body": [
-      "${1:const ${2:newArray} =} ${3:array}.map((${4:item}${5:, ${6:index}})=>{",
+      "${1:const ${2:newArray} =} ${3:array}.map((${4:item}${5:, ${6:index}}) => {",
       "  return ${7:newItem}",
       "})$0"
     ],
@@ -765,7 +765,7 @@
   "array filter": {
     "prefix": "x-arr-filter",
     "body": [
-      "${1:const ${2:newArray} =} ${3:array}.filter((${4:item}${5:, ${6:index}})=>{",
+      "${1:const ${2:newArray} =} ${3:array}.filter((${4:item}${5:, ${6:index}}) => {",
       "  return ${7:key} === ${8:value}",
       "})$0"
     ],
@@ -775,7 +775,7 @@
   "array find": {
     "prefix": "x-arr-find",
     "body": [
-      "${1:const ${2:newArray} =} ${3:array}.find((${4:item}${5:, ${6:index}})=>{",
+      "${1:const ${2:newArray} =} ${3:array}.find((${4:item}${5:, ${6:index}}) => {",
       "  return ${7:key} === ${8:value}",
       "})$0"
     ],
@@ -785,7 +785,7 @@
   "array findIndex": {
     "prefix": "x-arr-findIndex",
     "body": [
-      "${1:const ${2:i} =} ${3:array}.findIndex((${4:item}${5:, ${6:index}})=>{",
+      "${1:const ${2:i} =} ${3:array}.findIndex((${4:item}${5:, ${6:index}}) => {",
       "  return ${7:key} === ${8:value}",
       "})$0"
     ],
@@ -815,6 +815,15 @@
     ],
     "description": "array sort",
     "scope": "javascript,javascriptreact"
+  },
+  "array reduce": {
+    "prefix": "x-arr-reduce",
+    "body": [
+      "${1:const ${2:result} =} ${3:array}.reduce((${5:currentTotal}, ${4:item}${6:, ${7:index}}) => {",
+      "  return ${9:newTotal}",
+      "}, ${8:initialValue})$0"
+    ],
+    "description": "array reduce"
   },
   "arrow function": {
     "prefix": "x-f",
