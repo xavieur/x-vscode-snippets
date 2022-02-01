@@ -1188,6 +1188,7 @@
       "git branch // view local branches",
       "git branch -r // view remote branches",
       "git branch -a // view all branches: local and remote. Also: git branch --all",
+      "git branch -vv // view local branches and remote counterparts",
       "git branch <name> [<commit>]// create a branch at that commit",
       "git branch -m <old branch name> <new branch name> // move names",
       "git branch -M <old branch name> <new branch name> // if <newbranch> exists",
