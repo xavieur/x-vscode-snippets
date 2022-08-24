@@ -755,7 +755,7 @@
   "array map": {
     "prefix": "x-arr-map",
     "body": [
-      "${1:const ${2:newArray} =} ${3:array}.map((${4:item}${5:, ${6:index}})=>{",
+      "${1:const ${2:newArray} = }${3:array}.map((${4:item}${5:, ${6:index}})=>{",
       "  return ${7:newItem}",
       "})$0"
     ],
@@ -765,7 +765,7 @@
   "array filter": {
     "prefix": "x-arr-filter",
     "body": [
-      "${1:const ${2:newArray} =} ${3:array}.filter((${4:item}${5:, ${6:index}})=>{",
+      "${1:const ${2:newArray} = }${3:array}.filter((${4:item}${5:, ${6:index}})=>{",
       "  return ${7:key} === ${8:value}",
       "})$0"
     ],
@@ -775,7 +775,7 @@
   "array find": {
     "prefix": "x-arr-find",
     "body": [
-      "${1:const ${2:newArray} =} ${3:array}.find((${4:item}${5:, ${6:index}})=>{",
+      "${1:const ${2:newArray} = }${3:array}.find((${4:item}${5:, ${6:index}})=>{",
       "  return ${7:key} === ${8:value}",
       "})$0"
     ],
@@ -785,7 +785,7 @@
   "array findIndex": {
     "prefix": "x-arr-findIndex",
     "body": [
-      "${1:const ${2:i} =} ${3:array}.findIndex((${4:item}${5:, ${6:index}})=>{",
+      "${1:const ${2:i} = }${3:array}.findIndex((${4:item}${5:, ${6:index}})=>{",
       "  return ${7:key} === ${8:value}",
       "})$0"
     ],
@@ -795,7 +795,7 @@
   "array splice": {
     "prefix": "x-arr-splice",
     "body": [
-      "${1:const ${2:newArray} =} ${3:array}.splice(${4:indexToInsert}, ${5:numberToDelete}, ${6:commaSeparatedNewItems})$0"
+      "${1:const ${2:newArray} = }${3:array}.splice(${4:indexToInsert}, ${5:numberToDelete}, ${6:commaSeparatedNewItems})$0"
     ],
     "description": "array splice",
     "scope": "javascript,javascriptreact"
@@ -803,7 +803,7 @@
   "array sort": {
     "prefix": "x-arr-sort",
     "body": [
-      "${1:const ${2:arraySorted} =} ${3:array}.sort((${4:item}A, ${4:item}B)=> {",
+      "${1:const ${2:arraySorted} = }${3:array}.sort((${4:item}A, ${4:item}B)=> {",
       "    if (${4:item}A && ${4:item}B) {",
       "        return -1 // to keep",
       "    } else if (${4:item}A && ${4:item}B) {",
@@ -819,7 +819,7 @@
   "array reduce": {
     "prefix": "x-arr-reduce",
     "body": [
-      "${1:const ${2:result} =} ${3:array}.reduce((${5:currentTotal}, ${4:item}${6:, ${7:index}}) => {",
+      "${1:const ${2:result} = }${3:array}.reduce((${5:currentTotal}, ${4:item}${6:, ${7:index}}) => {",
       "  return ${9:newTotal}",
       "}, ${8:initialValue})$0"
     ],
@@ -829,7 +829,7 @@
   "array some": {
     "prefix": "x-arr-some",
     "body": [
-      "${1:const ${2:isTrue} =} ${3:array}.some((${4:item}${5:, ${6:index}}) => {",
+      "${1:const ${2:isTrue} = }${3:array}.some((${4:item}${5:, ${6:index}}) => {",
       "  return ${7:condition}",
       "})$0"
     ],
@@ -839,7 +839,7 @@
   "array every": {
     "prefix": "x-arr-every",
     "body": [
-      "${1:const ${2:isTrue} =} ${3:array}.every((${4:item}${5:, ${6:index}}) => {",
+      "${1:const ${2:isTrue} = }${3:array}.every((${4:item}${5:, ${6:index}}) => {",
       "  return ${7:condition}",
       "})$0"
     ],
